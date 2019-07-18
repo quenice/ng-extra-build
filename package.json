@@ -20,5 +20,10 @@
   },
   "bin": {
     "ng-extra-build": "bin/ng-extra-build.js"
+  },
+  "homepage": "https://github.com/quenice/ng-extra-build",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quenice/ng-extra-build.git"
   }
 }
