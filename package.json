@@ -1,0 +1,24 @@
+{
+  "name": "ng-extra-build",
+  "version": "1.0.0",
+  "description": "extra build for angular-cli 1.x",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "build"
+  ],
+  "author": {
+    "name": "quenice",
+    "email": "qiubing.it@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "~4.11.0",
+    "archiver": "^3.0.0"
+  },
+  "bin": {
+    "ng-extra-build": "bin/ng-extra-build.js"
+  }
+}
