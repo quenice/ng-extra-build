@@ -1,0 +1,5 @@
+- [ ] Auto generated `build.conf.js` when `npm install ng-extra-build`
+- [ ] Add `--help`
+- [ ] `schmea` for `build.conf.js`
+- [ ] Replace `sync` with `async`
+- [ ] `Usage`
