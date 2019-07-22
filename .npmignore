@@ -26,3 +26,4 @@ buck-out/
 .gitignore
 .npmignore
 TODO.md
+test/
