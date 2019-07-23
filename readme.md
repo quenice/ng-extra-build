@@ -211,3 +211,52 @@ Argument | Required | Default | Description
 }
 
 ```
+
+# Example Configuration File
+
+```json
+{
+  "$schema": "./node_modules/ng-extra-build/schema.json",
+  "base": {
+    "outDir": "dist"
+  },
+  "copy": [
+    {
+      "from": "$root/src/env/$env/favicon.ico",
+      "to": "$dist/favicon.ico"
+    }
+  ],
+  "css": {
+    "from": "$root/src/env/$env/css/theme.css",
+    "to": "$dist/assets/css",
+    "devUrl": "env/neware/css/theme.css"
+  },
+  "i18n": {
+    "source": "$root/src/assets/i18n",
+    "extra": "$root/src/env/$env/i18n",
+    "target": "$dist/assets/i18n"
+  },
+  "replacement": [
+    {
+      "file": "$dist/index.html",
+      "contents": [
+        {
+          "replace": "Neware Club",
+          "withEnv": {
+            "neware": "Neware RSP",
+            "joy": "Joytele RSP"
+          }
+        }
+      ]
+    }
+  ],
+  "deletion": [
+    "$dist/env"
+  ],
+  "compression": {
+    "from": "$dist",
+    "to": "$root"
+  }
+}
+
+```
