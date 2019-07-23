@@ -1,6 +1,6 @@
 {
   "name": "ng-extra-build",
-  "version": "1.0.7",
+  "version": "1.0.10",
   "description": "extra build for angular-cli 1.x",
   "scripts": {
     "install": "node scripts/install.js"
