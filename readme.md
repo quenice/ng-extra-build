@@ -172,30 +172,6 @@ Name | Value
 `$env` | Name of the envrionment currently being building. Its name is same as command argument you passed in the command line. For example, you may execute command: `ng-extra-build -env=neware`, then `$env` = `neware`
 
 
-
-```text
-src
-├── joy
-│   ├── css
-│   │   └── theme.css
-│   ├── favicon.ico
-│   └── i18n
-│       ├── cn.json
-│       ├── hk.json
-│       └── us.json
-└── neware
-    ├── css
-    │   └── theme.css
-    ├── favicon.ico
-    └── i18n
-        ├── cn.json
-        ├── hk.json
-        └── us.json
-
-
-```
-
-
 ## Configuration
 
 * **base** (`object`): The base config.
@@ -220,6 +196,40 @@ src
     * *withEnv* (`object`): Contents you want to replace with for the specified environment. key is *environment name*, value is corresponding content you want to replace with.
 * **deletion** (`array`): Files you want to delete.
 * **compression** (`object`): Compression configurations.
+
+# Recommend Directory Tree
+
+```text
+src
+├── joy
+│   ├── css
+│   │   └── theme.css
+│   ├── favicon.ico
+│   └── i18n
+│       ├── cn.json
+│       ├── hk.json
+│       └── us.json
+└── neware
+│   ├── css
+│   │   └── theme.css
+│   ├── favicon.ico
+│   └── i18n
+│       ├── cn.json
+│       ├── hk.json
+│       └── us.json
+└── ntt
+    ├── css
+    │   └── theme.css
+    ├── favicon.ico
+    └── i18n
+        ├── cn.json
+        ├── hk.json
+        └── us.json
+    ...
+    ...
+```
+
+`neware` / `joy` / `ntt` are environments.
 
 # Example Configuration File
 
