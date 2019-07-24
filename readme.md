@@ -1,5 +1,15 @@
 # ng-extra-build
-`ng-extra-build` is a build tool for `angular-cli`. You can use `ng-extra-build` to build multi-environment
+`ng-extra-build` is a build tool for `angular-cli`, you can use this for extra building tasks that `angular-cli` can't do, especially for *multi-environment*.
+
+## Features
+- Copy resources for the specified environment.
+- Compile and compress `css` file for the specified environment.
+- Merge `i18n` files for the specified environment.
+- Replace contents in final packaged file for the specified environment.
+- Delete files
+- Compress files
+
+
 # Getting Started
 ## Installation
 ```
@@ -8,7 +18,7 @@ npm install ng-extra-build --save-dev
 
 ## Usage
 ### Configuration
-After `ng-extra-build` installation is completed, you can find a configuration file named `build.conf.json` in `$your_project_dir`, you should modify this file as your requirements. See [Configuration Reference](#Configuration Reference).
+After `ng-extra-build` installation is completed, you can find a configuration file named `build.conf.json` in `$your_project_dir`, you should modify this file as your requirements. See [Configuration Reference](#configuration-reference).
 
 ### Command
 Append below command after `angular-cli` build command:
@@ -42,19 +52,20 @@ Argument | Required | Default | Description
 
 # Configuration Reference
 * **base** (`object`): The base config.
-  * *outDir* (`string`): The output directory for build results.This value must set be same as `outDir` in **Angular CLI**
-* **copy** (`array`): Copy resources into `outDir`
-  * *from* (`string`): Source file will be copied.
-  * *to* (`string`): Destination file will be copied
-* **css**
-  * *from*
-  * *to*
-  * *devUrl*
-* **i18n**
-  * *source*
-  * *extra*
-  * *target*
-* **replacement**
+  * *outDir* (`string`): The output directory for build results.This value must set be same as `outDir` in **Angular CLI**.
+* **copy** (`array`): Copy resources into `outDir`.
+  * *from* (`string`): Source file which will be copied.
+  * *to* (`string`): Destination file which will be copied to.
+* **css** (`object`): Css compile options.
+  * *from* (`string`): Source css file.
+  * *to* (`string`): Destination css file.
+  * *devUrl* (`string`): The css `href` in tag `<link>` in `index.html` for the development environment.After build, will replace this `href` with production environment `href`.
+
+* **i18n** (`object`): Build options for i18n files
+  * *source* (`string`): Directory of source i18n files
+  * *extra* (`string`): Directory of extra i18n files
+  * *target* (`string`): Directory of target i18n files
+* **replacement** (`object`): Replacement configurations
   * *file*
   * *contents*
     * *replace*
