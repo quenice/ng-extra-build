@@ -40,7 +40,13 @@ For example, if `neware` is one of your envoriment name, add below json content 
   ...
 }
 ```
-And then execute `npm run neware` to build application for production.
+And then execute command
+
+```
+npm run neware
+```
+
+to build application for production.
 
 #### Command Arguments
 
@@ -65,14 +71,14 @@ Argument | Required | Default | Description
   * *source* (`string`): Directory of source i18n files
   * *extra* (`string`): Directory of extra i18n files
   * *target* (`string`): Directory of target i18n files
-* **replacement** (`object`): Replacement configurations
-  * *file*
-  * *contents*
-    * *replace*
-    * *with*
-    * *withEnv*
-* **deletion**
-* **compression**
+* **replacement** (`array`): Replacement configurations
+  * *file* (`string`): The file (path) you want to execute the replacement.
+  * *contents* (`array`): Contents you want to replace.
+    * *replace* (`string`): Contents you want to replace.
+    * *with* (`string`): Contents you want to replace with
+    * *withEnv* (`object`): Contents you want to replace with for the specified environment. key is *environment name*, value is corresponding content you want to replace with.
+* **deletion** (`array`): Files you want to delete.
+* **compression** (`object`): Compression configurations.
 
 # Example Configuration File
 
